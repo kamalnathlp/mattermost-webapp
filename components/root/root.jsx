@@ -140,6 +140,7 @@ export default class Root extends React.Component {
         document.addEventListener('copy', (event) => {
             const selectionArray = document.getSelection().toString().split('\n');
 
+            // Since the getSelection() doesn't take into account the CSS property 'user-select' we have to manually create a class and exclude those elements
             const unselectableElements = document.getSelection().getRangeAt(0).commonAncestorContainer.querySelectorAll('.unselectable');
             const unselectableElementsArray = Array.from(unselectableElements).map((element) => element.textContent);
 
