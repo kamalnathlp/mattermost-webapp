@@ -98,6 +98,7 @@ export default class SidebarRight extends React.PureComponent {
         const isOpen = this.props.searchVisible || this.props.postRightVisible;
 
         if (!wasOpen && isOpen) {
+            this.determineTransition();
             trackEvent('ui', 'ui_rhs_opened');
         }
 
