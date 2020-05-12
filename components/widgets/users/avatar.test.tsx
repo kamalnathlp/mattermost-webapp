@@ -18,7 +18,7 @@ describe('components/widgets/users/Avatar', () => {
         expect(wrapper).toMatchInlineSnapshot(`
 <img
   alt="test-username profile image"
-  className="Avatar Avatar-xl"
+  className="Avatar Avatar-xl unselectable"
   src="test-url"
 />
 `);
@@ -31,7 +31,7 @@ describe('components/widgets/users/Avatar', () => {
         expect(wrapper).toMatchInlineSnapshot(`
 <img
   alt="user profile image"
-  className="Avatar Avatar-md"
+  className="Avatar Avatar-md unselectable"
   src="test-url"
 />
 `);

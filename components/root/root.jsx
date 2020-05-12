@@ -139,7 +139,11 @@ export default class Root extends React.Component {
 
         document.addEventListener('copy', (event) => {
             const selectionArray = document.getSelection().toString().split('\n');
-            const formattedSelection = selectionArray.reduce((result, line, index) => {
+
+            const unselectableElements = document.getSelection().getRangeAt(0).commonAncestorContainer.querySelectorAll('.unselectable');
+            const unselectableElementsArray = Array.from(unselectableElements).map((element) => element.textContent);
+
+            const formattedSelection = selectionArray.filter((element) => !unselectableElementsArray.includes(element)).reduce((result, line, index) => {
                 if (line.match(/\b((1[0-2]|0?[1-9]):([0-5][0-9]) ([AaPp][Mm]))/g) && index > 0) {
                     const userName = selectionArray[index - 1];
                     const timeStamp = line;
@@ -153,7 +157,7 @@ export default class Root extends React.Component {
                 }
                 return `${result}\n${line}`;
             }, '');
-            event.clipboardData.setData('text/plain', formattedSelection.trim());
+            event.clipboardData.setData('text/plain', formattedSelection.trim().replace(/\n+/g, '\n'));
             event.preventDefault();
         });
 

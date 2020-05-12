@@ -5,7 +5,7 @@ exports[`components/ProfilePicture should match snapshot, no user specified, def
   className="status-wrapper"
 >
   <span
-    className="profile-icon "
+    className="profile-icon  unselectable"
   >
     <Avatar
       size="md"
@@ -25,7 +25,7 @@ exports[`components/ProfilePicture should match snapshot, no user specified, ove
   className="status-wrapper"
 >
   <span
-    className="profile-icon "
+    className="profile-icon  unselectable"
   >
     <Avatar
       size="xl"
@@ -63,7 +63,7 @@ exports[`components/ProfilePicture should match snapshot, profile and src, defau
     tabIndex={-1}
   >
     <span
-      className="profile-icon "
+      className="profile-icon  unselectable"
     >
       <Avatar
         size="md"
@@ -84,7 +84,7 @@ exports[`components/ProfilePicture should match snapshot, user specified 1`] = `
   className="status-wrapper"
 >
   <span
-    className="profile-icon "
+    className="profile-icon  unselectable"
   >
     <Avatar
       size="md"
@@ -104,7 +104,7 @@ exports[`components/ProfilePicture should match snapshot, user specified, overri
   className="status-wrapper"
 >
   <span
-    className="profile-icon "
+    className="profile-icon  unselectable"
   >
     <Avatar
       size="xs"

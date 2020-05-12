@@ -52,7 +52,7 @@ export default class ProfilePicture extends React.PureComponent<Props> {
             this.props.profileSrc :
             this.props.src;
 
-        const profileIconClass = `profile-icon ${this.props.isEmoji ? 'emoji' : ''}`;
+        const profileIconClass = `profile-icon ${this.props.isEmoji ? 'emoji' : ''} unselectable`;
 
         if (this.props.userId) {
             return (

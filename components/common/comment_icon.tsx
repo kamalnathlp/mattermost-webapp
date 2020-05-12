@@ -33,7 +33,7 @@ export default class CommentIcon extends React.PureComponent<Props> {
         if (this.props.commentCount > 0) {
             iconStyle += ' post-menu__item--show';
             commentCountSpan = (
-                <span className='post-menu__comment-count'>
+                <span className='post-menu__comment-count unselectable'>
                     {this.props.commentCount}
                 </span>
             );

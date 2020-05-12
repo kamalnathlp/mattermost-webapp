@@ -13,7 +13,7 @@ type Props = {
 
 const Avatar: React.FunctionComponent<Props> = ({url, username, size = 'md'}: Props) => (
     <img
-        className={`Avatar Avatar-${size}`}
+        className={`Avatar Avatar-${size} unselectable`}
         alt={`${username || 'user'} profile image`}
         src={url}
     />

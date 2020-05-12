@@ -170,7 +170,7 @@ exports[`components/post_view/PostAttachment should match snapshot, on edited po
     />
   </div>
   <span
-    className="post-edited__indicator"
+    className="post-edited__indicator unselectable"
     id="postEdited_post_id"
   >
     <FormattedMessage
@@ -189,7 +189,7 @@ exports[`components/post_view/PostAttachment should match snapshot, on edited po
 
 exports[`components/post_view/PostAttachment should match snapshot, on edited post 2`] = `
 <span
-  className="post-edited__indicator"
+  className="post-edited__indicator unselectable"
   id="postEdited_post_id"
 >
   <FormattedMessage
